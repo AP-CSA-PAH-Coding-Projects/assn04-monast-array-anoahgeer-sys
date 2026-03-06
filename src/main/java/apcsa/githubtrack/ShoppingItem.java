@@ -22,7 +22,7 @@ public class ShoppingItem
     public boolean equals(ShoppingItem other)
     {
         //test
-        if (name.equals(other.getName()))
+        if (name.equals(other.getName()) && price == other.getPrice()*100)
             return true;
         return false;
     }
@@ -33,7 +33,7 @@ public class ShoppingItem
         if(!name.equals(other.getName()))
             System.out.println("Error: Different items!");
         //Return Difference
-        return (price - other.getPrice());
+        return (price - 100*other.getPrice());
     }
 
     //getters:
@@ -44,7 +44,7 @@ public class ShoppingItem
 
     public double getPrice()
     {
-        return price/100;
+        return (double)price/100;
     }
 
     public boolean isSold()

@@ -70,9 +70,9 @@ public class ShoppingList implements MyList
     public ShoppingItem getAt(int index)
     {
         //check for erros
-        if (index < 0 || index > size)
+        if (index < 0 || index > size || size == 0)
         {
-            System.out.println("invald index!");
+            System.out.println("Invalid index!");
             return null;
         }
         //else, return item at index
